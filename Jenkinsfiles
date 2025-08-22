@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Deploying to different environments (staging/production)
+if [ "$DEPLOY_ENV" == "staging" ]; then
+    echo "Deploying to Staging..."
+    # Simulate a deployment process (could use SCP, rsync, etc.)
+    # rsync -avz app.py user@staging-server:/path/to/deploy/
+elif [ "$DEPLOY_ENV" == "production" ]; then
+    echo "Deploying to Production..."
+    # Simulate deployment to production
+    # rsync -avz app.py user@production-server:/path/to/deploy/
+else
+    echo "Unknown deployment environment!"
+    exit 1
+fi
